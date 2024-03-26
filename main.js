@@ -8,18 +8,9 @@ formAgenda.addEventListener('submit', function(e) {
     const nome = document.getElementById('nome').value;
     const numero = document.getElementById('numero-contato').value;
 
+    adicionarContato(nome, numero)
 
-
-    // Limpa o conteúdo atual do rodapé da tabela
-    rodapeTabela.innerHTML = '';
-
-    // Atualiza o rodapé da tabela com os dados do último contato adicionado
-    const linhaRodape = document.createElement('tr');
-    linhaRodape.innerHTML = `
-        <td>${nome}</td>
-        <td>${numero}</td>
-    `;
-    rodapeTabela.appendChild(linhaRodape);
+    
 });
 
 function adicionarContato(nome, numero) {
@@ -30,3 +21,5 @@ function adicionarContato(nome, numero) {
     `;
     tabelaContatos.appendChild(linha);
 }
+
+
